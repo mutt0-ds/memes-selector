@@ -1,5 +1,3 @@
-# How I used a Neural Network to pick memes for my girlfriend
-
 Well, my GF's tastes in memes are simple: she loves wholesome memes and, most importantly, **she loves animals**.
 
 That's why I created a script that:
