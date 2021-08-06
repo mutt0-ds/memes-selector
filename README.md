@@ -1,4 +1,4 @@
-# Using a Neural Network to select memes for my girlfriend
+# Selecting memes for my girlfriend with a Neural Network
 
 Well, my GF's tastes in memes are simple: she loves wholesome memes and, most importantly, **she loves animals**.
 
