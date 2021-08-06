@@ -1,6 +1,6 @@
 Well, my GF's tastes in memes are simple: she loves wholesome memes and, most importantly, **she loves animals**.
 
-That's why I created a script that:
+That's why I created a fun little project that:
 1. Surfs [r/wholesomemes](https://www.reddit.com/r/wholesomememes/)
 2. Downloads a few of the hottest memes in the contents folder
 3. Initializes a ResNet50 model to select the ones that contains any animal
@@ -15,6 +15,8 @@ Use [this guide](https://yojji.io/blog/how-to-make-a-reddit-bot) for creating on
 
 ResNet50 ([more info here](https://keras.io/api/applications/resnet/)) is an Image Recognition model that outputs a probability score (which I'm ignoring at the moment) and one of the 1000 labels available. The labels are mapped in the imagenet_class_index, and the first 397 are about animals (mostly cats and dogs). 
 So, if the model's predicted label is in that sublist, we can classify the meme as "containing animals".
+
+![logo](https://github.com/mutt0-ds/memes-selector/blob/main/media/example.png
 
 ### Email
 
