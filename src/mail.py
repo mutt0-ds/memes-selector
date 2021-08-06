@@ -59,7 +59,7 @@ class EmailSender:
         msgAlternative.attach(msgText)
 
         #attaching images
-        os.chdir(self.PATH
+        os.chdir(self.PATH)
         for i in range(self.NUM_MEMES):
             image = selected_memes[i][1]
             
