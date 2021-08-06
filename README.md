@@ -8,6 +8,7 @@ That's why I created a fun little project that:
 3. Initializes a ResNet50 model that recognizes the ones containing any animal
 4. Sends them via mail to my GF (greeted by plenty of positive feedbacks)
 
+### Final email (3 memes by defaul)
 ![finalmail](https://github.com/mutt0-ds/memes-selector/blob/main/media/result.png)
 
 
