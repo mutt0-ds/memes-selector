@@ -55,7 +55,7 @@ def select_animal_memes(directory,path_json):
     '''
     
     selected_memes, others = [],[]
-    num_memes = os.environ.get["NUM_MEMES"]
+    num_memes = os.environ.get("NUM_MEMES")
     anim_codes = create_animals_dict(path_json)
 
     #sorting by natural numbers: 1,2,3,12,21 not 1,11,12,2,21
