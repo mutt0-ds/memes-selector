@@ -1,37 +1,28 @@
-## Welcome to GitHub Pages
+# How I used a Neural Network to pick memes for my girlfriend
 
-You can use the [editor on GitHub](https://github.com/mutt0-ds/memes-selector/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Well, my GF's tastes in memes are simple: she loves wholesome memes and, most importantly, **she loves animals**.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+That's why I created a script that:
+1. Surfs [r/wholesomemes](https://www.reddit.com/r/wholesomememes/)
+2. Downloads a few of the hottest memes in the contents folder
+3. Initializes a ResNet50 model to select the ones that contains any animal
+4. Sends them via mail to my GF (greeted by plenty of positive feedbacks)
 
-### Markdown
+### Reddit
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+I'm using the praw library for downloading memes, it requires a Reddit Bot enabled.
+Use [this guide](https://yojji.io/blog/how-to-make-a-reddit-bot) for creating one, it's a quick process.
 
-```markdown
-Syntax highlighted code block
+### ResNet50
 
-# Header 1
-## Header 2
-### Header 3
+ResNet50 ([more info here](https://keras.io/api/applications/resnet/)) is an Image Recognition model that outputs a probability score (which I'm ignoring at the moment) and one of the 1000 labels available. The labels are mapped in the imagenet_class_index, and the first 397 are about animals (mostly cats and dogs). 
+So, if the model's predicted label is in that sublist, we can classify the meme as "containing animals".
 
-- Bulleted
-- List
+### Email
 
-1. Numbered
-2. List
+I'm using smtplib for sending the email, so it just requires the email and password of the sender and the email of the receiver.
 
-**Bold** and _Italic_ and `Code` text
+### Use
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mutt0-ds/memes-selector/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Be free to have fun with the memes selector, it can be tweaked to select only a certain type of memes, change subreddit, etc...
+I would love to send the message via Whatsapp but the only alternative (by Twilio) is not simple to adapt.
