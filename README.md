@@ -1,20 +1,20 @@
-# Selecting memes for my girlfriend with a Neural Network
+# Using a Neural Network for sending memes to my girlfriend
 
 Well, my GF's tastes in memes are simple: she loves wholesome memes and, most importantly, **she loves animals**.
 
 That's why I created a fun little project that:
-1. Surfs [r/wholesomemes](https://www.reddit.com/r/wholesomememes/)
+1. Surfs the subreddit [r/wholesomemes](https://www.reddit.com/r/wholesomememes/)
 2. Downloads a few of the hottest memes in the contents folder
-3. Initializes a ResNet50 model that recognizes the ones containing any animal
-4. Sends them via mail to my GF (greeted by plenty of positive feedbacks)
+3. Initializes a ResNet50 model that recognizes images containing any animal
+4. Sends them via mail to my GF (positively welcomed)
 
 ### Final email (3 memes by default)
-![finalmail](https://github.com/mutt0-ds/memes-selector/blob/main/media/result.png)
 
+![finalmail](https://github.com/mutt0-ds/memes-selector/blob/main/media/result.png)
 
 ### Reddit
 
-I'm using the praw library for downloading memes, it requires a Reddit Bot enabled.
+I'm using the praw library for downloading the memes, it requires a Reddit Bot enabled.
 Use [this guide](https://yojji.io/blog/how-to-make-a-reddit-bot) for creating one, it's a quick process.
 
 ### ResNet50
