@@ -6,6 +6,9 @@ That's why I created a fun little project that:
 3. Initializes a ResNet50 model to select the ones that contains any animal
 4. Sends them via mail to my GF (greeted by plenty of positive feedbacks)
 
+![finalmail](https://github.com/mutt0-ds/memes-selector/blob/main/media/final.png)
+
+
 ### Reddit
 
 I'm using the praw library for downloading memes, it requires a Reddit Bot enabled.
